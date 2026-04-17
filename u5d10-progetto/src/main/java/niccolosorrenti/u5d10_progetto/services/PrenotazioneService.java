@@ -32,7 +32,7 @@ public class PrenotazioneService {
 
         Viaggio viaggio = viaggioRepository.findById(viaggioId).orElseThrow(() -> new NotFoundException("Viaggio non trovato"));
 
-        boolean dipendenteOccupato = prenotazioneRepository.existsByDipendenteIdAndDataRichiesta(dipendenteId, data);
+        boolean dipendenteOccupato = prenotazioneRepository.existsByDipendente_DipendenteIdAndDataRichiesta(dipendenteId, data);
 
         if (dipendenteOccupato) {
             throw new ConflictException("Dipendente gia occupato in questa data");

@@ -7,5 +7,5 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 public interface PrenotazioneRepository extends JpaRepository<Prenotazione, UUID> {
-    boolean existsByDipendenteIdAndDataRichiesta(UUID dipendenteId, LocalDate dataRichiesta);
+    boolean existsByDipendente_DipendenteIdAndDataRichiesta(UUID dipendenteId, LocalDate dataRichiesta);
 }
